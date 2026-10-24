@@ -48,12 +48,6 @@ Browser (frontend/*.html, app.js)  <--JSON over HTTP-->  Flask API (backend/app.
 Edit `backend/questions.json`. Each item: `t` topic code (pc, tw, sp, sr, bl, cd), `l` level 1-3, `q` question, `o` options,
 `a` index of the correct option, `e` explanation. Restart the server.
 
-## Limits (say these in your viva)
-- The question bank (with correct answers) is sent to the browser, so a determined student could read it. Fix: keep answers on the server and check them there.
-- Needs the server running. The earlier offline mode was removed.
-- Flask's built-in server is for development. For deployment use gunicorn behind HTTPS and set SECRET_KEY.
-- No login rate limiting or password reset yet. Only 18 questions, and the tutor is rule-based.
-
 ## Roadmap
 LLM tutor grounded in the question bank, more topics (verbal, data interpretation), regional-language explanations,
 Bayesian Knowledge Tracing, Docker + cloud deployment, pilot study with pre/post test.
